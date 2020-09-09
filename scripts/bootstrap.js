@@ -1,3 +1,11 @@
+/*
+ * @Descripttion: 
+ * @version: 
+ * @Author: huanghao
+ * @Date: 2020-09-09 17:20:08
+ * @LastEditors: huanghao
+ * @LastEditTime: 2020-09-09 17:21:02
+ */
 // create package.json, README, etc. for packages that don't have them yet
 
 const args = require('minimist')(process.argv.slice(2))
@@ -7,7 +15,7 @@ const version = require('../package.json').version
 
 const packagesDir = path.resolve(__dirname, '../packages')
 const files = fs.readdirSync(packagesDir)
-
+//
 files.forEach(shortName => {
   if (!fs.statSync(path.join(packagesDir, shortName)).isDirectory()) {
     return
